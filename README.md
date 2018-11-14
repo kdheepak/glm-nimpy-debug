@@ -1,9 +1,14 @@
 # glm-nimpy-debug
 
 
-### Testing
+### Summary
 
-- Install nimpy
+- Install nimpy and switch to pr 65
+- Install glm
+- Test Python module with file in this repo
+
+### Instructions
+
 - Install glm
 
 ```
@@ -12,7 +17,7 @@ cd glm
 nimble install
 ```
 
-Make sure nimpy is being used from this branch: https://github.com/yglukhov/nimpy/pull/65
+- Ensure nimpy is being used from this branch: https://github.com/yglukhov/nimpy/pull/65
 
 ```
 cd ..
@@ -22,13 +27,13 @@ nimble install -y
 cd ../glm
 ```
 
-Test `glm2json` command line version
+- Test `glm2json` command line version
 
 ```
 nim c -d:release -r src/glm2json.nim --pathtofile ./IEEE_13_Node_Test_Feeder.glm # check that this works properly and dumps json to screen
 ```
 
-Test `glm` python module. This should segfault to replicate the error.
+- Test `glm` python module. This should segfault to replicate the error.
 
 ```
 
