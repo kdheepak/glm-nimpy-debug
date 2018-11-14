@@ -27,6 +27,17 @@ nimble install -y
 cd ../glm
 ```
 
+OR, alternatively, you can use the following PR, they are identical.
+
+```
+cd ..
+git clone https://github.com/yglukhov/nimpy
+git fetch origin pull/65/head:add-python-exception-from-nim
+git checkout add-python-exception-from-nim
+nim install -y
+cd ../glm
+```
+
 - Test `glm2json` command line version
 
 ```
