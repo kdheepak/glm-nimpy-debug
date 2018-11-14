@@ -48,6 +48,8 @@ nim c -d:release -r src/glm2json.nim --pathtofile ./IEEE_13_Node_Test_Feeder.glm
 
 ```
 
+curl -LO 'https://raw.githubusercontent.com/kdheepak/glm-nimpy-debug/master/IEEE_13_Node_Test_Feeder.glm'
+
 cat >t.py <<EOL
 import sys
 
