@@ -8,12 +8,29 @@
 
 ```
 git clone https://github.com/NREL/glm
-
 cd glm
+nimble install
+```
 
-# Make sure nimpy is being used from this branch: https://github.com/yglukhov/nimpy/pull/65
+Make sure nimpy is being used from this branch: https://github.com/yglukhov/nimpy/pull/65
 
+```
+cd ..
+git clone https://github.com/kdheepak/nimpy
+git checkout kd/add-python-exception-from-nim
+nimble install -y
+cd ../glm
+```
+
+Test `glm2json` command line version
+
+```
 nim c -d:release -r src/glm2json.nim --pathtofile ./IEEE_13_Node_Test_Feeder.glm # check that this works properly and dumps json to screen
+```
+
+Test `glm` python module. This should segfault to replicate the error.
+
+```
 
 touch t.py
 
